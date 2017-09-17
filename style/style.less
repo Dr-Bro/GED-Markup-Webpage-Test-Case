@@ -24,6 +24,7 @@ header{
 	float: right;
 	width: 250px;
 	background: #e4dede;
+	padding: 15px;
 	img{
 		width: 250px;
 	}
@@ -59,6 +60,7 @@ main{
 	 	img{
 	 		width: 400px;
 	 		float: left;
+	 		padding-right: 15px;
 	 	}
 	 	.news-content{
 	 		min-height: 300px;
@@ -73,9 +75,24 @@ main{
    				border-radius: 2px;
 	 	}
 	.news{
+		padding: 5px;
+		min-height: 200px;
 		img{
 			float: left;
 			width: 300px;
+			padding-right: 15px;
+			height: 200px;
+		}
+	}
+
+	.little-news{
+		.time{
+			float: right;
+			padding: 30px;
+			time{
+				margin-top: 5px;
+				color: white;
+			}
 		}
 	}
 }
@@ -104,18 +121,29 @@ main{
 }
 
 .another{
-	    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+	    
     
 	.wrapper{
+	margin: 15px;
+display: flex;
+align-content: center;
+justify-content: space-between;
+flex-wrap: wrap;
+width: 1048px;
+
 		div{
-		border: 2px solid black;	
+		border: 1px solid #8a8686;	
 		display: inline-block;
-		width: 30%;
+		width: 300px;
+		&:hover{
+			box-shadow: 3px 1px 6px rgba(0,0,0,0.5);;
+		}
+		p{
+			margin: 10px;
+		}
 		img{
 			width: 300px;
+			height: 180px;
 		}
 		}
 	}
