@@ -1,30 +1,66 @@
-body{
+body {
 	margin: 0;
+	font-family: arial;
 }
 header{
     background: #3a3a43;
     margin: 0;
+    // position: fixed;
     	menu{
+    		margin: 0;
+    		padding: 0;
 		ul{
+			padding: 0;
 			.logo{
 				color: red;
 			}
 			li{
 				display: inline-block;
 				list-style: none;
-				padding: 15px;
+				padding: 12px;
 				color: white;
 				vertical-align: middle;
 			}
+			.active{
+				border-bottom: #fc0 3px solid;
+				color: #fc0;
+			}
+			.spec{
+				color: orange;
+				// background: url('header-icons.png')  -15px 102% no-repeat;
+				&:before{
+					content: '';
+position: absolute;
+margin-left: -18px;
+margin-top: -7px;
+background: url('header-icons.png') 0 -109px no-repeat;
+padding: 24px 0 0 17px;
+				}
+
+				
+			}
+			.absolute{
+				&:hover{
+					stroke: #5079dd;
+				}
+			}
+
 		}
 	}
 }
 
+.fixed{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+}
 .sidebar{
 	float: right;
 	width: 250px;
 	background: #e4dede;
 	padding: 15px;
+	// position: fixed;
+	// left: 80%;
 	img{
 		width: 250px;
 	}
@@ -41,9 +77,9 @@ main{
 	min-width: 740px;
 	margin: 15px;
 	padding: 35px;
-	border: 1px solid grey;
+	border:  1px solid #ccc8c8;
 	.big-news{
-		border-bottom: 1px solid grey;
+		border-bottom: 1px solid #ccc8c8;
 		.news-title{
 			.title-text,.title-date{
 				display: inline-block;
@@ -75,7 +111,7 @@ main{
    				border-radius: 2px;
 	 	}
 	.news{
-		padding: 5px;
+		padding: 10px;
 		min-height: 200px;
 		img{
 			float: left;
@@ -94,6 +130,10 @@ main{
 				color: white;
 			}
 		}
+			.warning_date{
+				position: absolute;
+				margin-left: 13%;
+			}
 	}
 }
 
@@ -132,9 +172,10 @@ flex-wrap: wrap;
 width: 1048px;
 
 		div{
-		border: 1px solid #8a8686;	
+		border: 1px solid #ccc8c8;	
 		display: inline-block;
 		width: 300px;
+		margin-bottom: 30px;
 		&:hover{
 			box-shadow: 3px 1px 6px rgba(0,0,0,0.5);;
 		}
